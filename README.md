@@ -1,4 +1,4 @@
-# 📘 Manual Interativo - Módulo de Necessidades Educacionais Específicas
+# 📘 Manual Interativo - Módulo de Necessidades Educacionais Especiais
 
 > **Status do Projeto:** 🚀 Funcional / Em Aprimoramento
 
