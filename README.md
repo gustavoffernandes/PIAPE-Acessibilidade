@@ -1,4 +1,4 @@
-# 📘 Manual Interativo - Módulo de Acessibilidade (PIAPE)
+# 📘 Manual Interativo - Módulo de Necessidades Educacionais Específicas
 
 > **Status do Projeto:** 🚀 Funcional / Em Aprimoramento
 
