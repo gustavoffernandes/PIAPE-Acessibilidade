@@ -151,4 +151,79 @@ document.addEventListener('DOMContentLoaded', function() {
             fecharModal();
         }
     });
+
+    // --- FUNÇÃO 4: ACESSIBILIDADE (ALTO CONTRASTE & FONTE) ---
+    
+    // Elementos
+    const btnAltoContraste = document.getElementById('btnAltoContraste');
+    const btnAumentar = document.getElementById('btnAumentarFonte');
+    const btnDiminuir = document.getElementById('btnDiminuirFonte');
+    const btnRestaurar = document.getElementById('btnRestaurarFonte');
+    const body = document.body;
+
+    // Configurações de Fonte
+    let fontSizeAtual = 100; // Porcentagem
+    const minFont = 75;
+    const maxFont = 150;
+
+    // 1. Lógica do Alto Contraste
+    function toggleAltoContraste() {
+        body.classList.toggle('alto-contraste');
+        // Atualiza o ícone/texto do botão para feedback visual
+        if(body.classList.contains('alto-contraste')){
+            btnAltoContraste.classList.replace('btn-outline-dark', 'btn-light');
+            localStorage.setItem('acessibilidade_contraste', 'ativado');
+        } else {
+            btnAltoContraste.classList.replace('btn-light', 'btn-outline-dark');
+            localStorage.setItem('acessibilidade_contraste', 'desativado');
+        }
+    }
+
+    if(btnAltoContraste) {
+        btnAltoContraste.addEventListener('click', toggleAltoContraste);
+        
+        // Verifica preferência salva
+        if(localStorage.getItem('acessibilidade_contraste') === 'ativado') {
+            toggleAltoContraste();
+        }
+    }
+
+    // 2. Lógica do Tamanho da Fonte
+    // Alteramos a fonte no elemento <html> (root) para usar a medida REM do CSS
+    function atualizarFonte() {
+        document.documentElement.style.fontSize = fontSizeAtual + '%';
+        localStorage.setItem('acessibilidade_fonte', fontSizeAtual);
+    }
+
+    if(btnAumentar) {
+        btnAumentar.addEventListener('click', function() {
+            if(fontSizeAtual < maxFont) {
+                fontSizeAtual += 10; // Aumenta 10%
+                atualizarFonte();
+            }
+        });
+    }
+
+    if(btnDiminuir) {
+        btnDiminuir.addEventListener('click', function() {
+            if(fontSizeAtual > minFont) {
+                fontSizeAtual -= 10; // Diminui 10%
+                atualizarFonte();
+            }
+        });
+    }
+
+    if(btnRestaurar) {
+        btnRestaurar.addEventListener('click', function() {
+            fontSizeAtual = 100; // Volta ao padrão
+            atualizarFonte();
+        });
+    }
+
+    // Carrega tamanho salvo
+    const fonteSalva = localStorage.getItem('acessibilidade_fonte');
+    if(fonteSalva) {
+        fontSizeAtual = parseInt(fonteSalva);
+        atualizarFonte();
+    }
 });

@@ -302,3 +302,64 @@ body {
     transform: translateY(-3px); /* Efeito hover igual aos cards */
     box-shadow: 0 5px 15px rgba(0, 77, 64, 0.2);
 }
+
+/* --- COLE ISTO NO FINAL DO SEU STYLE.CSS --- */
+
+/* 1. Ativa o fundo preto e texto branco no corpo do site */
+body.alto-contraste {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+/* 2. Força a cor preta em todos os elementos que costumam ser brancos */
+body.alto-contraste .bg-white,
+body.alto-contraste .bg-light,
+body.alto-contraste .navbar,
+body.alto-contraste .offcanvas,
+body.alto-contraste .card,
+body.alto-contraste .profile-card,
+body.alto-contraste .accordion-item,
+body.alto-contraste .accordion-button:not(.collapsed),
+body.alto-contraste .contact-card,
+body.alto-contraste .sidebar-btn,
+body.alto-contraste .hero-section {
+    background-color: #000000 !important;
+    background: #000000 !important; /* Remove gradientes */
+    color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    box-shadow: none !important; /* Remove sombras */
+}
+
+/* 3. Transforma textos, ícones e links em Amarelo (Destaque) */
+body.alto-contraste a,
+body.alto-contraste .text-success,
+body.alto-contraste .text-muted,
+body.alto-contraste .bi,
+body.alto-contraste .navbar-brand,
+body.alto-contraste h1, 
+body.alto-contraste h2, 
+body.alto-contraste h3, 
+body.alto-contraste h4, 
+body.alto-contraste h5, 
+body.alto-contraste h6 {
+    color: #FFFF00 !important;
+}
+
+/* 4. Ajustes finos para bordas e inputs */
+body.alto-contraste .accordion-item,
+body.alto-contraste .profile-card,
+body.alto-contraste .contact-card {
+    border: 1px solid #FFFFFF !important;
+}
+
+body.alto-contraste .search-input,
+body.alto-contraste .custom-input,
+body.alto-contraste .form-control {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+body.alto-contraste .accordion-button::after {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}

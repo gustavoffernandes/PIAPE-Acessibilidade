@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // --- DESTINATÁRIOS ---
         $mail->setFrom('gustavo.ffernandes8@gmail.com', 'Módulo NEE - Contato'); // Remetente sistema
-        $mail->addAddress('lucassagica5@gmail.com', 'Equipe de Acessibilidade'); // Quem recebe
+        $mail->addAddress('contato.proges@gmail.com', 'Equipe de Acessibilidade'); // Quem recebe
         $mail->addReplyTo($email, $nome); // Responder para o usuário que preencheu
 
         // --- CONTEÚDO DO EMAIL ---
