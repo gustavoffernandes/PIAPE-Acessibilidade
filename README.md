@@ -26,12 +26,12 @@ Focando na inclusão digital, o projeto já conta com ferramentas essenciais imp
 * **Alto Contraste:** Modo de visualização com cores otimizadas (Fundo preto/Texto amarelo ou branco) para facilitar a leitura.
 * **Ajuste de Fonte:** Botões de controle (`A+`, `A-`) que permitem aumentar ou diminuir o tamanho do texto dinamicamente.
 
-### 2. 📧 Sistema de Contato (100% Funcional)
+### 2. 📧 Sistema de Contato
 * **Envio Real:** Formulário "Entre em Contato" testado e operante.
 * **Backend Robusto:** Integração completa com **PHPMailer** via SMTP (Gmail), garantindo que as mensagens cheguem corretamente à caixa de entrada da equipe.
 * **Segurança:** Validação de campos e sanitização de dados no backend.
 
-### 3. 🔍 Busca Inteligente (Live Search)
+### 3. 🔍 Busca Inteligente
 * Barra de pesquisa que filtra tópicos em tempo real conforme o usuário digita.
 * Expande automaticamente os "accordions" (tópicos) onde o termo pesquisado foi encontrado.
 
