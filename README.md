@@ -88,4 +88,5 @@ PIAPE-Acessibilidade/
 ├── enviar.php          # Script de processamento do formulário (Backend)
 ├── PHPMailer/          # Biblioteca para envio SMTP
 ├── logo/               # Identidade visual
+├── manuais/            # materiais em pdf
 └── print/              # Imagens e capturas de tela dos tutoriais
